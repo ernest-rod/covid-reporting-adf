@@ -72,7 +72,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(activity('Get Data file Metadata').output.columnCount, 14)",
+						"value": "@equals(activity('Get Data file Metadata').output.columnCount, 13)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
