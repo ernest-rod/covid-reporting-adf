@@ -1,0 +1,7 @@
+{
+	"name": "pl_ingest_population_data",
+	"properties": {
+		"description": "Get data from Blob storage and move to Azure Data Lake",
+		"annotations": []
+	}
+}
