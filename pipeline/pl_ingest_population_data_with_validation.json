@@ -7,7 +7,14 @@
 				"name": "Copy Population Data",
 				"description": "Bring data file from blob storage account into the data lake.",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Check If File Exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.00:05:00",
 					"retry": 0,
