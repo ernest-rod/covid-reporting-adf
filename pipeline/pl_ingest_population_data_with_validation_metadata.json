@@ -23,7 +23,14 @@
 				"name": "Get Data file Metadata",
 				"description": "Get the metadata from the file to check if the structure is valid.",
 				"type": "GetMetadata",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Check If File Exists",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
