@@ -14,6 +14,9 @@
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://covidreportingdlbidyn.dfs.core.windows.net"
 		},
+		"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
+			"value": "/subscriptions/b422d504-452d-4c32-86ff-df16b9c82ff1/resourceGroups/UDEMY-Azure_Data_Factory_For_Engineers/providers/Microsoft.Storage/storageAccounts/covidreportingsabidyn"
+		},
 		"containerUri": {
 			"value": ""
 		},
