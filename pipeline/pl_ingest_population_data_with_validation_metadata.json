@@ -87,7 +87,7 @@
 			},
 			{
 				"name": "Get Data file Metadata",
-				"description": "Get the metadata from the file to check if structure is valid.",
+				"description": "Get the metadata from the file to check if the structure is valid.",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
