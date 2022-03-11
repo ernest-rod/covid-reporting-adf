@@ -1,7 +1,7 @@
 {
 	"name": "pl_ingest_population_data_with_validation",
 	"properties": {
-		"description": "Get data from Blob storage and move to Azure Data Lake",
+		"description": "Get data from Blob storage and move to Azure Data Lake.\n\nHere we are validating that the file exists.",
 		"activities": [
 			{
 				"name": "Copy Population Data",
