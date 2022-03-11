@@ -61,9 +61,23 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Check If File Exists",
+				"description": "Check if the files exists in source folder in blob storage.",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
 			}
 		],
 		"concurrency": 1,
+		"folder": {
+			"name": "Data Ingestion From Azure Blob"
+		},
 		"annotations": []
 	}
 }
