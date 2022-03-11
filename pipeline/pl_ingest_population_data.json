@@ -64,6 +64,9 @@
 			}
 		],
 		"concurrency": 1,
+		"folder": {
+			"name": "Data Ingestion From Azure Blob"
+		},
 		"annotations": []
 	}
 }
