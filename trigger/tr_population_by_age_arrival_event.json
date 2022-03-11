@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "When arrival of population by age file.",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
