@@ -75,6 +75,21 @@
 						"value": "@equals(activity('Get Data file Metadata').output.columnCount, 13)",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "Report Failure in Column Count",
+							"type": "Fail",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"message": {
+									"value": "@concat('Coulumn count failed: count is ', string( activity('Get Data file Metadata').output.columnCount) )",
+									"type": "Expression"
+								},
+								"errorCode": "101"
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "Copy Population Data",
