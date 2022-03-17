@@ -49,13 +49,25 @@
 				"inputs": [
 					{
 						"referenceName": "ds_cases_deaths_raw_csv_http",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"param_relative_url": {
+								"value": "@variables('var_source_relative_url')",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ds_cases_deaths_raw_csv_dl",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"param_file_name": {
+								"value": "@variables('var_sink_file_name')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
