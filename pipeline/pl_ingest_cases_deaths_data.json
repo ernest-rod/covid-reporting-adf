@@ -75,7 +75,7 @@
 		"variables": {
 			"var_source_relative_url": {
 				"type": "String",
-				"defaultValue": "cloudboxacademy/covid19/raw/ecdc_data/hospital_admissions.csv"
+				"defaultValue": "/cloudboxacademy/covid19/raw/ecdc_data/hospital_admissions.csv"
 			},
 			"var_sink_file_name": {
 				"type": "String",
