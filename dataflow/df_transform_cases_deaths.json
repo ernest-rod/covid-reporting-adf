@@ -59,7 +59,9 @@
 				"          country_code,",
 				"          population,",
 				"          source,",
-				"          reported_date),",
+				"          reported_date,",
+				"          {} = ERROR_FUNCTION('')),",
+				"     pivotBy(indicator, ['confirmed cases', 'deaths']),",
 				"     columnNaming: '$N$V',",
 				"     lateral: true) ~> PivotCounts"
 			]
