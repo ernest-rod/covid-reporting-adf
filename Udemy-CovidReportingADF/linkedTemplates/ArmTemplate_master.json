@@ -23,14 +23,6 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().param_source_base_url}"
 		},
-		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_source_relative_url": {
-			"type": "string",
-			"defaultValue": "cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv"
-		},
-		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_sink_file_name": {
-			"type": "string",
-			"defaultValue": "hospital_admissions.csv"
-		},
 		"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/b422d504-452d-4c32-86ff-df16b9c82ff1/resourceGroups/UDEMY-Azure_Data_Factory_For_Engineers/providers/Microsoft.Storage/storageAccounts/covidreportingsabidyn"
@@ -73,12 +65,6 @@
 					},
 					"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url')]"
-					},
-					"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_source_relative_url": {
-						"value": "[parameters('tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_source_relative_url')]"
-					},
-					"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_sink_file_name": {
-						"value": "[parameters('tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_sink_file_name')]"
 					},
 					"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
 						"value": "[parameters('tr_population_by_age_arrival_event_properties_typeProperties_scope')]"
