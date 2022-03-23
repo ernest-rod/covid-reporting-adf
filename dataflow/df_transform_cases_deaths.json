@@ -32,6 +32,9 @@
 				},
 				{
 					"name": "PivotCounts"
+				},
+				{
+					"name": "LookupCountry"
 				}
 			],
 			"scriptLines": [
@@ -80,7 +83,11 @@
 				"     pivotBy(indicator, ['confirmed cases', 'deaths']),",
 				"     Count = sum(daily_count),",
 				"     columnNaming: '$V_$N',",
-				"     lateral: true) ~> PivotCounts"
+				"     lateral: true) ~> PivotCounts",
+				"PivotCounts, SrcCountryLookUp lookup(PivotCounts@country == SrcCountryLookUp@country,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> LookupCountry"
 			]
 		}
 	}
