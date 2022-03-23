@@ -54,6 +54,10 @@
 							"param_relative_url": {
 								"value": "@pipeline().parameters.param_source_relative_url",
 								"type": "Expression"
+							},
+							"param_base_url": {
+								"value": "@pipeline().parameters.param_source_base_url",
+								"type": "Expression"
 							}
 						}
 					}
