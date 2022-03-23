@@ -8,14 +8,30 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "ds_raw_cases_and_deaths",
+						"type": "DatasetReference"
+					},
 					"name": "SrcCasesAndDeaths"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> SrcCasesAndDeaths"
+				"source(output(",
+				"          Afghanistan as string,",
+				"          AFG as string,",
+				"          Asia as string,",
+				"          {38928341} as string,",
+				"          {confirmed cases} as string,",
+				"          {0} as string,",
+				"          {2020-01-02} as string,",
+				"          Prop_7 as string,",
+				"          {Epidemic intelligence, national daily data} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SrcCasesAndDeaths"
 			]
 		}
 	}
