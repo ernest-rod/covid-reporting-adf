@@ -14,9 +14,6 @@
 		"ls_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://covidreportingdlbidyn.dfs.core.windows.net"
 		},
-		"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
-			"value": "/subscriptions/b422d504-452d-4c32-86ff-df16b9c82ff1/resourceGroups/UDEMY-Azure_Data_Factory_For_Engineers/providers/Microsoft.Storage/storageAccounts/covidreportingsabidyn"
-		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"value": "https://github.com"
 		},
@@ -25,6 +22,9 @@
 		},
 		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_param_sink_file_name": {
 			"value": "hospital_admissions.csv"
+		},
+		"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
+			"value": "/subscriptions/b422d504-452d-4c32-86ff-df16b9c82ff1/resourceGroups/UDEMY-Azure_Data_Factory_For_Engineers/providers/Microsoft.Storage/storageAccounts/covidreportingsabidyn"
 		},
 		"containerUri": {
 			"value": ""
