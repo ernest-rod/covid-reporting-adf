@@ -3,10 +3,19 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_http_opendata_ecdc_europa_eu",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"param_source_base_url": {
+					"value": "@dataset().param_base_url",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"param_relative_url": {
+				"type": "string"
+			},
+			"param_base_url": {
 				"type": "string"
 			}
 		},
