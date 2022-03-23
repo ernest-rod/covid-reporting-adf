@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Data Flow Transform Cases and Deaths",
+				"description": "",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
