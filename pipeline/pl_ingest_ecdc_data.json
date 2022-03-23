@@ -102,11 +102,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"param_relative_url": {
-											"value": "@pipeline().parameters.param_source_relative_url",
+											"value": "@item().sourceRelativeURL",
 											"type": "Expression"
 										},
 										"param_base_url": {
-											"value": "@pipeline().parameters.param_source_base_url",
+											"value": "@item().sourceBaseURL",
 											"type": "Expression"
 										}
 									}
@@ -118,7 +118,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"param_file_name": {
-											"value": "@pipeline().parameters.param_sink_file_name",
+											"value": "@item().sinkFileName",
 											"type": "Expression"
 										}
 									}
