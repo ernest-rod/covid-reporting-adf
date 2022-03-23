@@ -129,17 +129,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"param_source_relative_url": {
-				"type": "string"
-			},
-			"param_sink_file_name": {
-				"type": "string"
-			},
-			"param_source_base_url": {
-				"type": "string"
-			}
-		},
 		"variables": {
 			"var_source_relative_url": {
 				"type": "String",
