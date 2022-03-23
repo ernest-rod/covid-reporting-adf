@@ -78,6 +78,9 @@
 			},
 			"param_sink_file_name": {
 				"type": "string"
+			},
+			"param_source_base_url": {
+				"type": "string"
 			}
 		},
 		"variables": {
