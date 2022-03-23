@@ -105,6 +105,26 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Copy Every File From List",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup EDCD File List",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup EDCD File List').output.value",
+						"type": "Expression"
+					},
+					"isSequential": false
+				}
 			}
 		],
 		"parameters": {
