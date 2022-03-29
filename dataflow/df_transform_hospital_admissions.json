@@ -16,7 +16,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "SelectRequiredField"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          country as string,",
@@ -29,7 +33,17 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> SrcHospitalAdmissions"
+				"     ignoreNoFilesFound: false) ~> SrcHospitalAdmissions",
+				"SrcHospitalAdmissions select(mapColumn(",
+				"          country,",
+				"          indicator,",
+				"          reported_date = date,",
+				"          reported_year_week = year_week,",
+				"          value,",
+				"          source",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectRequiredField"
 			]
 		}
 	}
