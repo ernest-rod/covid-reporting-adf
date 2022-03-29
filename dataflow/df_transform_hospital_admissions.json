@@ -127,7 +127,7 @@
 				"DerivedECDCYearWeek aggregate(groupBy(ecdc_year_week),",
 				"     week_start_date = min( date ),",
 				"          week_end_date = max( date )) ~> AggDimDate",
-				"SplitDailyFromWeekly@Weekly, AggDimDate join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"SplitDailyFromWeekly@Weekly, AggDimDate join(reported_year_week == ecdc_year_week,",
 				"     joinType:'inner',",
 				"     broadcast: 'auto')~> JoinWithDate"
 			]
