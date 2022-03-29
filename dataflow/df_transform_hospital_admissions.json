@@ -45,6 +45,9 @@
 				},
 				{
 					"name": "DerivedECDCYearWeek"
+				},
+				{
+					"name": "AggDimDate"
 				}
 			],
 			"scriptLines": [
@@ -117,7 +120,8 @@
 				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFieldsAfterLkUp",
 				"SelectRequiredFieldsAfterLkUp split(lower( left(indicator, 6) ) == 'weekly',",
 				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)",
-				"SrcDimDate derive(ecdc_year_week = concat( year, '-W', lpad( week_of_year, 2, '0' ) )) ~> DerivedECDCYearWeek"
+				"SrcDimDate derive(ecdc_year_week = concat( year, '-W', lpad( week_of_year, 2, '0' ) )) ~> DerivedECDCYearWeek",
+				"DerivedECDCYearWeek aggregate(groupBy(ecdc_year_week)) ~> AggDimDate"
 			]
 		}
 	}
