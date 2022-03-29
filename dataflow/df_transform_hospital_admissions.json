@@ -88,7 +88,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFieldsAfterLkUp",
-				"SelectRequiredFieldsAfterLkUp split(ERROR_FUNCTION(''),",
+				"SelectRequiredFieldsAfterLkUp split(lower( left(indicator, 6) ) == 'weekly',",
 				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)"
 			]
 		}
