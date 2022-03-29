@@ -32,6 +32,9 @@
 				},
 				{
 					"name": "SelectRequiredFieldsAfterLkUp"
+				},
+				{
+					"name": "SplitDailyFromWeekly"
 				}
 			],
 			"scriptLines": [
@@ -84,7 +87,9 @@
 				"          population",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFieldsAfterLkUp"
+				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFieldsAfterLkUp",
+				"SelectRequiredFieldsAfterLkUp split(ERROR_FUNCTION(''),",
+				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)"
 			]
 		}
 	}
