@@ -29,7 +29,15 @@
 					"name": "SrcDimDate"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_processed_hospital_admission_weekly",
+						"type": "DatasetReference"
+					},
+					"name": "WeeklySink"
+				}
+			],
 			"transformations": [
 				{
 					"name": "SelectRequiredField"
@@ -199,7 +207,14 @@
 				"          source",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> SelectDailyFields"
+				"     skipDuplicateMapOutputs: true) ~> SelectDailyFields",
+				"SelectWeeklyFields sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> WeeklySink"
 			]
 		}
 	}
