@@ -13,12 +13,22 @@
 						"type": "DatasetReference"
 					},
 					"name": "SrcHospitalAdmissions"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_country_lookup",
+						"type": "DatasetReference"
+					},
+					"name": "SrcCountryLookUp"
 				}
 			],
 			"sinks": [],
 			"transformations": [
 				{
 					"name": "SelectRequiredField"
+				},
+				{
+					"name": "LookupCountry"
 				}
 			],
 			"scriptLines": [
@@ -34,6 +44,16 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> SrcHospitalAdmissions",
+				"source(output(",
+				"          country as string,",
+				"          country_code_2_digit as string,",
+				"          country_code_3_digit as string,",
+				"          continent as string,",
+				"          population as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SrcCountryLookUp",
 				"SrcHospitalAdmissions select(mapColumn(",
 				"          country,",
 				"          indicator,",
@@ -43,7 +63,11 @@
 				"          source",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> SelectRequiredField"
+				"     skipDuplicateMapOutputs: true) ~> SelectRequiredField",
+				"SelectRequiredField, SrcCountryLookUp lookup(SelectRequiredField@country == SrcCountryLookUp@country,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> LookupCountry"
 			]
 		}
 	}
