@@ -65,9 +65,6 @@
 					},
 					"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 						"value": "[parameters('ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url')]"
-					},
-					"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
-						"value": "[parameters('tr_population_by_age_arrival_event_properties_typeProperties_scope')]"
 					}
 				}
 			},
@@ -86,6 +83,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"tr_population_by_age_arrival_event_properties_typeProperties_scope": {
+						"value": "[parameters('tr_population_by_age_arrival_event_properties_typeProperties_scope')]"
 					}
 				}
 			},
