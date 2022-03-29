@@ -42,6 +42,9 @@
 				},
 				{
 					"name": "SplitDailyFromWeekly"
+				},
+				{
+					"name": "DerivedECDCYearWeek"
 				}
 			],
 			"scriptLines": [
@@ -113,7 +116,8 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> SelectRequiredFieldsAfterLkUp",
 				"SelectRequiredFieldsAfterLkUp split(lower( left(indicator, 6) ) == 'weekly',",
-				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)"
+				"     disjoint: false) ~> SplitDailyFromWeekly@(Weekly, Daily)",
+				"SrcDimDate derive(ecdc_year_week = concat( year, '-W', lpad( week_of_year, 2, '0' ) )) ~> DerivedECDCYearWeek"
 			]
 		}
 	}
