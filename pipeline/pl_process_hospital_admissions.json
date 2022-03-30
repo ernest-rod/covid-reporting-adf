@@ -1,0 +1,9 @@
+{
+	"name": "pl_process_hospital_admissions",
+	"properties": {
+		"folder": {
+			"name": "Data Flows Hospital Admissions"
+		},
+		"annotations": []
+	}
+}
