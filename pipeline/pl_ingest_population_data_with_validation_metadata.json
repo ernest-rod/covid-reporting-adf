@@ -51,6 +51,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -189,7 +190,7 @@
 		],
 		"concurrency": 1,
 		"folder": {
-			"name": "Data Ingestion From Azure Blob"
+			"name": "Ingest/Data Ingestion From Azure Blob"
 		},
 		"annotations": []
 	}

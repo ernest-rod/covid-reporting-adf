@@ -59,7 +59,7 @@
 			}
 		],
 		"folder": {
-			"name": "Data To Azure SQL"
+			"name": "SQLize/Data To Azure SQL"
 		},
 		"annotations": []
 	}

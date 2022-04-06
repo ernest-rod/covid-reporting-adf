@@ -140,7 +140,7 @@
 			}
 		},
 		"folder": {
-			"name": "Data Ingestion From HTTP"
+			"name": "Ingest/Data Ingestion From HTTP"
 		},
 		"annotations": []
 	}
