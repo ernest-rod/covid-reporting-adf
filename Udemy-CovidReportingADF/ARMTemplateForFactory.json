@@ -189,7 +189,7 @@
 					}
 				},
 				"folder": {
-					"name": "Data Ingestion From HTTP"
+					"name": "Ingest/Data Ingestion From HTTP"
 				},
 				"annotations": []
 			},
@@ -274,7 +274,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Ingestion From Azure Blob"
+					"name": "Ingest/Data Ingestion From Azure Blob"
 				},
 				"annotations": []
 			},
@@ -382,7 +382,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Ingestion From Azure Blob"
+					"name": "Ingest/Data Ingestion From Azure Blob"
 				},
 				"annotations": []
 			},
@@ -594,7 +594,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Ingestion From Azure Blob"
+					"name": "Ingest/Data Ingestion From Azure Blob"
 				},
 				"annotations": []
 			},
@@ -647,7 +647,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Flows Cases & Deaths"
+					"name": "Process/Data Flows Cases & Deaths"
 				},
 				"annotations": []
 			},
@@ -700,7 +700,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Flows Hospital Admissions"
+					"name": "Process/Data Flows Hospital Admissions"
 				},
 				"annotations": []
 			},
@@ -740,7 +740,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data Bricks"
+					"name": "Process/Data Bricks"
 				},
 				"annotations": []
 			},
@@ -2079,7 +2079,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data To Azure SQL"
+					"name": "SQLize/Data To Azure SQL"
 				},
 				"annotations": []
 			},
@@ -2230,7 +2230,7 @@
 					"cancelAfter": {}
 				},
 				"folder": {
-					"name": "Data To Azure SQL"
+					"name": "SQLize/Data To Azure SQL"
 				},
 				"annotations": []
 			},
