@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "ecdc/hospital_admission_daily",
 							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
